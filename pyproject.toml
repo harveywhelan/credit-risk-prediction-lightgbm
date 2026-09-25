@@ -30,6 +30,7 @@ build-backend = "uv_build"
 [tool.uv]
 # Tell uv to never download pre-built wheels for lightgbm
 no-binary-package = ["lightgbm"]
+package = false
 
 [tool.uv.config-settings-package.lightgbm]
 "cmake.define.USE_CUDA" = "ON"

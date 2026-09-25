@@ -26,7 +26,15 @@ fi
 echo "   -> Installing NCCL version: $NCCL_VER"
 sudo apt-get install -y --allow-downgrades libnccl2=$NCCL_VER libnccl-dev=$NCCL_VER
 
-echo "4. Syncing Python environment and building LightGBM natively..."
+echo "4. Checking for uv package manager..."
+if ! command -v uv &> /dev/null; then
+    echo "   -> uv not found. Installing uv..."
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    # Add uv to the current script's PATH so it can be used immediately below
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+echo "5. Syncing Python environment and building LightGBM natively..."
 uv sync
 
 echo "Setup complete! Activate your environment with: source .venv/bin/activate"
