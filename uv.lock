@@ -420,6 +420,7 @@ dependencies = [
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "optuna" },
+    { name = "optuna-integration", extra = ["lightgbm"] },
     { name = "pandas" },
     { name = "pyarrow" },
     { name = "python-dotenv" },
@@ -439,6 +440,7 @@ requires-dist = [
     { name = "matplotlib", specifier = ">=3.11.2" },
     { name = "numpy", specifier = ">=2.5.3" },
     { name = "optuna", specifier = ">=5.0.0" },
+    { name = "optuna-integration", extras = ["lightgbm"], specifier = ">=5.0.0" },
     { name = "pandas", specifier = ">=3.0.6" },
     { name = "pyarrow", specifier = ">=25.0.1" },
     { name = "python-dotenv", specifier = ">=1.2.3" },
@@ -1310,6 +1312,24 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/27/6d/7bd33b5ed3a83f1c1517fb20c54c7dbf59e6c76430d9b26d3205074ff6b0/optuna-5.0.0.tar.gz", hash = "sha256:358bb878b7b1e20e90dc944ac4261796dd3d5c2b7860aa960a08fc10e0b5beff", size = 508726, upload-time = "2026-09-07T05:16:21.136Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/90/e5/7c5e8cdda8c9f0cd8aca0a376dee9cff6b8c30692cf614960d9e80f59689/optuna-5.0.0-py3-none-any.whl", hash = "sha256:5fff892ae6baf4948c810c5b8635ec67e08efb0709b41cb73b14e30391d44720", size = 442352, upload-time = "2026-09-07T05:16:19.943Z" },
+]
+
+[[package]]
+name = "optuna-integration"
+version = "5.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "optuna" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b0/80/11da348a0cf62e7e4561508215e79bc44f2e7e96e15c810e373f687346b0/optuna_integration-5.0.0.tar.gz", hash = "sha256:d32d099a37c3d4c8376d10676e67f789429b4489ada70eacdeefa4350499a89e", size = 79666, upload-time = "2026-09-07T05:05:28.946Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fc/2e/05051341d6b86652292a32f8b413d334aa337f78d58d4099f78a47ff5a60/optuna_integration-5.0.0-py3-none-any.whl", hash = "sha256:598247471d44553c98665ce96dc7d9e6534bb8b2ef38273197f76bdf916e5e2a", size = 88158, upload-time = "2026-09-07T05:05:27.663Z" },
+]
+
+[package.optional-dependencies]
+lightgbm = [
+    { name = "lightgbm" },
+    { name = "scikit-learn" },
 ]
 
 [[package]]
