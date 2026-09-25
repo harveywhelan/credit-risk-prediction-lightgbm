@@ -34,8 +34,7 @@ no-binary-package = ["lightgbm"]
 package = false
 
 [tool.uv.config-settings-package.lightgbm]
-"cmake.define.USE_CUDA" = "ON"
-"cmake.define.CMAKE_CUDA_ARCHITECTURES" = "native"
+"cmake.define.USE_GPU" = "ON"
 
 [dependency-groups]
 dev = [
