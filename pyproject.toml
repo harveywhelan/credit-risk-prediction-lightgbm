@@ -1,0 +1,41 @@
+[project]
+name = "credit-risk-prediction-lightgbm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Harvey", email = "harveyjwhelan@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "duckdb>=1.5.5",
+    "kaggle>=2.2.4",
+    "lightgbm>=4.7.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "optuna>=5.0.0",
+    "pandas>=3.0.6",
+    "pyarrow>=25.0.1",
+    "python-dotenv>=1.2.3",
+    "shap>=0.52.0",
+]
+
+[project.scripts]
+credit-risk-prediction-lightgbm = "credit_risk_prediction_lightgbm:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+# Tell uv to never download pre-built wheels for lightgbm
+no-binary-package = ["lightgbm"]
+
+[tool.uv.config-settings-package.lightgbm]
+"cmake.define.USE_CUDA" = "ON"
+"cmake.define.CMAKE_CUDA_ARCHITECTURES" = "native"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
