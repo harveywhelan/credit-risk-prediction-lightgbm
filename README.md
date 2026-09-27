@@ -6,6 +6,8 @@
 
 ![Image of SHAP importance plot for the best model found by Optuna. This shows that the model retains strong predictive power without relying on attributes that are indistinguishable from noise, highly correlated with other features, or using protected attributes.](assets/final_shap_plot.png)
 
+![draw.io image showing the original database schema (shown in green), how features were engineered in views and aggregated up the chain to the current application level, forming a flat 2D dataset to pass to LightGBM whilst preserving as much predictive signal as possible.](assets/database_architecture_rollup.png)
+
 
 ## ✦ Overview
 
