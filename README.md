@@ -3,9 +3,8 @@
 > **Predicting credit default risk whilst prioritising model explainability, regulatory fairness, and efficient data processing.**
 
 ![Current Project Status](https://img.shields.io/badge/Status-Completed-limegreen.svg)
-<!--
+
 ![Image of SHAP importance plot for the best model found by Optuna. This shows that the model retains strong predictive power without relying on attributes that are indistinguishable from noise, highly correlated with other features, or using protected attributes.](assets/final_shap_plot.png)
--->
 
 
 ## ✦ Overview
